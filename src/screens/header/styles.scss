@@ -1,0 +1,69 @@
+@import '../../styles/config.scss';
+
+.headerCont {
+    @include flex($flexDirection: row);
+    height: 100%;
+    width: 100%;
+
+    .titleCont {
+        @include flex();
+        padding: 0 3%;
+        height: 100%;
+
+        .title1 {
+            font-weight: bold;
+            font-size: x-large;
+            color: rgb(201, 27, 27);
+            letter-spacing: 2px;
+        }
+
+        .title2 {
+            font-weight: bold;
+        }
+    }
+
+    .navigators {
+        @include flex($flexDirection: row, $justifyContent: space-evenly);
+        flex: 1;
+
+        p {
+            font-size: medium;
+            color: white;
+            cursor: pointer;
+            border-radius: 20px;
+            padding: 10px 15px;
+            background-color: rgb(67, 139, 197);
+            box-shadow: 9px 9px 18px #b8b9be,
+                -9px -9px 18px #ffffff;
+            transition: all 0.4s;
+
+            &:hover {
+                background-color: rgb(20, 103, 170);
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .headerCont {
+        .titleCont {
+            .title1, .title2 {
+                font-size: medium;
+            }
+        }
+
+        .navigators {
+            p {
+                font-size: small;
+                padding: 0;
+                background-color: transparent;
+                box-shadow: none;
+                color: blue;
+            }
+
+            .settings {
+                display: none;
+            }
+        }
+    }
+}

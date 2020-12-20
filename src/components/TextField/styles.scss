@@ -1,0 +1,48 @@
+
+
+.textFieldContainer {
+    width: 100%;
+    margin-bottom: 2%;
+
+    .textfield {
+        box-sizing: border-box;
+        width: 100%;
+        background-color: rgb(202, 199, 199);
+        border: none;
+        padding: 15px 10px;
+        padding-left: 70px;
+        border-radius: 20px;
+        color: white;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: medium;
+        font-weight: bold;
+        z-index: 1;
+
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .searchIcon {
+        position: relative;
+        width: fit-content;
+        z-index: 0;
+        top: -35px;
+        left: 20px;
+        cursor: pointer;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .textFieldContainer {
+        .textfield {
+            padding: 10px 10px;
+            padding-left: 70px;
+        }
+
+        .searchIcon {
+            top: -30px;
+        }
+    }
+}

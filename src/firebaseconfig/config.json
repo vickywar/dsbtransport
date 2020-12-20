@@ -1,0 +1,10 @@
+{
+    "apiKey": "xxxxxxxxxxxxxxxxxxxxxxx",
+    "authDomain": "xxxxxxxxxxxxxxxxxxxxxxx",
+    "databaseURL": "xxxxxxxxxxxxxxxxxxxxxxx",
+    "projectId": "xxxxxxxxxxxxxxxxxxxxxxx",
+    "storageBucket": "xxxxxxxxxxxxxxxxxxxxxxx",
+    "messagingSenderId": "xxxxxxxxxxxxxxxxxxxxxxx",
+    "appId": "xxxxxxxxxxxxxxxxxxxxxxx",
+    "measurementId": "xxxxxxxxxxxxxxxxxxxxxxx"
+}

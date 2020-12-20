@@ -1,0 +1,36 @@
+@import '../../styles/config.scss';
+
+.newTransaction {
+    @include flex($justifyContent: flex-start, $alignItems: flex-start);
+    max-height: 600px;
+    overflow-y: auto;
+    width: 100%;
+    font-size: large;
+
+    .transactionField {
+        @include flex($flexDirection: row, $justifyContent: space-between);
+        width: 100%;
+
+        input,
+        select {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        input {
+            min-width: 40%;
+            padding: 12px;
+            border-radius: 5px;
+            border: 1px solid black;
+        }
+
+        .newTransSelect {
+            min-width: 40%;
+            padding: 12px;
+            border-radius: 5px;
+            border: 1px solid black;
+            background-color: #fff;
+        }
+    }
+}

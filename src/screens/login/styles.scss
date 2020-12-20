@@ -1,0 +1,109 @@
+@import '../../styles/config.scss';
+
+.loginpagecontainer {
+    display: grid;
+    place-items: center;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Ubuntu', monospace;
+    // background-color: #4267B2;
+
+    .rightBottom {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 50%;
+        height: 65%;
+        z-index: 1;
+        border-top-left-radius: 100%;
+        background-color: #4267B2;
+    }
+
+    .leftTop {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 30%;
+        height: 40%;
+        z-index: 1;
+        border-bottom-right-radius: 100%;
+        background-color: #4267B2;
+    }
+
+    .logincredsContainer {
+        z-index: 2;
+        width: 30%;
+        height: 50%;
+        background-color: white;
+        border-radius: 10px;
+        position: relative;
+        padding: 5% 15%;
+        box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+        .logincreds {
+            @include flex($justifyContent: center, $alignItems: center);
+            width: 100%;
+            height: 100%;
+        }
+
+        .rightBottomInside {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 33%;
+            height: 50%;
+            background-color: #4267B2;
+            border-top-left-radius: 100%;
+        }
+    }
+
+
+    .title {
+        @include flex();
+        margin-bottom: 10%;
+        width: 80%;
+        overflow: hidden;
+
+        .title1,
+        .title2 {
+            z-index: 2;
+        }
+
+        .title1 {
+            font-size: 3em;
+            font-weight: bold;
+            color: red;
+        }
+
+        .title2 {
+            font-weight: bold;
+            font-size: 2em;
+        }
+    }
+
+    .loginbtn {
+        background: blue;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: large;
+        cursor: pointer;
+        border-radius: 10px;
+        width: 25%;
+        transition: all 0.2s ease-out;
+
+        &:hover {
+            background: darkblue;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+// @media only screen and (max-width: 1500px) {
+//     .loginpagecontainer {
+//         display: none;
+//     }
+// }

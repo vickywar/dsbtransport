@@ -1,0 +1,31 @@
+
+
+sno
+ldate ( transaction complete or not ( boolean ) - logic) 
+lrnumber
+
+advance paid
+    date
+advance balance
+    date
+
+loading halami
+unloading halami
+
+driver name
+vehicle number
+
+driver advance paid
+    date
+driver balance 
+    date
+remarks
+
+
+things to show in table before select 
+
+customer name | load date | advance paid | driver name | vehicle number | driver advance paid 
+https://itnext.io/firebase-login-functionality-from-scratch-with-react-redux-2bf316e5820f
+
+
+

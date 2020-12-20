@@ -1,0 +1,87 @@
+@import '../../styles/config.scss';
+
+
+.newmodalcont {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    font-family: 'Ubuntu', monospace;
+    font-size: 2em;
+
+    .newmodal {
+        @include flex($justifyContent: space-evenly);
+        max-height: 90%;
+        height: auto;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        border-radius: 10px;
+        width: 50%;
+        background-color: rgb(255, 255, 255);
+        overflow: auto;
+
+        .userInputForm {
+            width: 80%;
+            @include flex();
+
+            .vehicleDetails {
+                width: 80%;
+                max-height: 300px;
+                overflow: auto;
+
+                .addVehicleBtn {
+                    cursor: pointer;
+                }
+
+                .removeVehicleBtn {
+                    cursor: pointer;
+                }
+
+                .vehicleNumber {
+                    @include flex($justifyContent: space-between, $flexDirection: row);
+                    margin-bottom: 10px;
+                    margin-top: 10px;
+
+                    input {
+                        padding: 15px 7px 15px 10px;
+                        font-weight: bold;
+                        border-radius: 20px;
+                        border: none;
+                        font-family: 'Ubuntu', monospace;
+                        font-size: medium;
+                        background-color: rgb(219, 215, 215);
+
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        .submitorcancel {
+            @include flex($justifyContent: space-evenly, $flexDirection: row);
+            width: 40%;
+            margin-top: 5%;
+        }
+
+        button {
+            min-width: 100px;
+            padding: 20px 20px;
+            border: none;
+            border-radius: 10px;
+            line-height: 1.1em;
+            cursor: pointer;
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+}
