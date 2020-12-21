@@ -22,6 +22,7 @@ const DataTable = (props) => {
     } = useSelector(state => state.filters);
 
     useEffect(() => {
+        // to be done : otherfilters
         if (transactions.length > 0) {
             if (customer.length || driver.length) {
                 const arr = [];
@@ -36,10 +37,6 @@ const DataTable = (props) => {
         }
         setFilteredTransactions(transactions);
     }, [customer, driver, dateRange, otherFilters, transactions]);
-
-    useEffect(() => {
-        console.log(filteredTransactions);
-    })
 
     const getName = (docId, field) => {
         var fielddata = field === "customer" ? customers : drivers;
@@ -66,31 +63,33 @@ const DataTable = (props) => {
         })
     }
 
-    const transComponent = (
-        filteredTransactions.map((el, id) => (
-            <>
-                <tr key={id} onClick={() => { selectedTransFunc(el.id) }}>
-                    <td>{id + 1}</td>
-                    <td><input className="transField" type="text" defaultValue={getName(el.custname, "customer")} /> </td>
-                    <td><input className="transField" type="text" defaultValue={el.fromPlace} /> </td>
-                    <td><input className="transField" type="text" defaultValue={el.toPlace} /> </td>
-                    <td><input className="transField" type="text" defaultValue={el.ldate} /> </td>
-                    <td><input className="transField" type="text" defaultValue={el.custadv} /> </td>
-                    <td><input className="transField" type="text" defaultValue={getName(el.drivname, "driver")} /> </td>
-                    <td><input className="transField" type="text" defaultValue={el.vehno} /> </td>
-                    <td><input className="transField" type="text" defaultValue={el.custbal} /> </td>
-                </tr>
-                {
-                    trExpand === el.id ?
-                        <tr key={id} className={`trExpanded${trExpand === el.id ? "--view" : ""}`}>
-                            <td colSpan={9} style={{ border: 'none', padding: 0 }}>
-                                <ExpandedDetail transactions={selectedTrans} />
-                            </td>
-                        </tr> : null
-                }
-            </>
-        ))
-    )
+    const transComponent = () => {
+        return (
+            filteredTransactions.map((el, id) => (
+                <>
+                    <tr key={id} onClick={() => { selectedTransFunc(el.id) }}>
+                        <td>{id + 1}</td>
+                        <td><input className="transField" type="text" value={getName(el.custname, "customer")} /> </td>
+                        <td><input className="transField" type="text" value={el.fromPlace} /> </td>
+                        <td><input className="transField" type="text" value={el.toPlace} /> </td>
+                        <td><input className="transField" type="text" value={el.ldate} /> </td>
+                        <td><input className="transField" type="text" value={el.custadv} /> </td>
+                        <td><input className="transField" type="text" value={getName(el.drivname, "driver")} /> </td>
+                        <td><input className="transField" type="text" value={el.vehno} /> </td>
+                        <td><input className="transField" type="text" value={el.custbal} /> </td>
+                    </tr>
+                    {
+                        trExpand === el.id ?
+                            <tr key={id} className={`trExpanded${trExpand === el.id ? "--view" : ""}`}>
+                                <td colSpan={9} style={{ border: 'none', padding: 0 }}>
+                                    <ExpandedDetail transactions={selectedTrans} />
+                                </td>
+                            </tr> : null
+                    }
+                </>
+            ))
+        )
+    }
 
     return (
         <table>
@@ -108,7 +107,7 @@ const DataTable = (props) => {
                 </tr>
             </thead>
             <tbody>
-                { transComponent }
+                {transComponent()}
             </tbody>
         </table>
     );
