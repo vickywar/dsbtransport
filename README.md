@@ -2,11 +2,9 @@
 This project is a mock for the original production based site. A content management system prototype for managing a transport based business.
 
 # Snippets from the project
-![image]
-(../src/images/112734757-bec94200-8f6d-11eb-99d5-95bf8fef68ba.png)
+![image](src/images/112734757-bec94200-8f6d-11eb-99d5-95bf8fef68ba.png)
 
-![image]
-(images/jula.png)
+![image](images/jula.png)
 
 ## Available Scripts
 
