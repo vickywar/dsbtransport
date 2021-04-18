@@ -3,7 +3,7 @@ This project is a mock for the original production based site. A content managem
 
 # Snippets from the project
 ![image]
-(images/112734757-bec94200-8f6d-11eb-99d5-95bf8fef68ba.png?raw=true "Title")
+(./src/images/112734757-bec94200-8f6d-11eb-99d5-95bf8fef68ba.png)
 
 ![image]
 (images/jula.png)
